@@ -1,1 +1,10 @@
-Hello World..!
+SQL> select * from user_astatus_map; STATUS# STATUS ---------- -------------------------------- 
+0 OPEN 
+1 EXPIRED 
+2 EXPIRED(GRACE) 
+4 LOCKED(TIMED) 
+8 LOCKED 5 EXPIRED 
+& LOCKED(TIMED) 
+6 EXPIRED(GRACE) & LOCKED(TIMED) 
+9 EXPIRED & LOCKED 
+10 EXPIRED(GRACE) & LOCKED The astatus column gets is value derived as 25 = 16 + 8 + 1 Congratulations Hello..!!!
