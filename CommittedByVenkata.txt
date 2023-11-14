@@ -1,8 +1,13 @@
 Committed by Venkata at 7:03 PM EST on 11/09/2023
 modified by raghu
+<<<<<<< Updated upstream
 added another line by venakta
 
 ----- Adding new lines----
+=======
+
+-- adding new lines--
+>>>>>>> Stashed changes
 Resources:
   MySNSTopic:
     Type: "AWS::SNS::Topic"
@@ -22,6 +27,7 @@ Resources:
 UpdateResources:
   MySNSSubscription:
     Type: "AWS::SNS::Subscription"
+<<<<<<< Updated upstream
     DeletionPolicy: "Delete"
 	
 ---zabbix-agent---
@@ -32,3 +38,6 @@ UpdateResources:
   Process: 21661 ExecStop=/bin/kill -SIGTERM $MAINPID (code=exited, status=0/SUCCESS)
   Process: 1344 ExecStart=/usr/sbin/zabbix_agentd -c $CONFFILE (code=exited, status=0/SUCCESS)
  Main PID: 1353 (code=exited, status=0/SUCCESS)
+=======
+    DeletionPolicy: "Delete"
+>>>>>>> Stashed changes
