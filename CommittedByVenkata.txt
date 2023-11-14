@@ -1,3 +1,25 @@
 Committed by Venkata at 7:03 PM EST on 11/09/2023
 modified by raghu
 added another line by venakta
+
+----- Adding new lines----
+Resources:
+  MySNSTopic:
+    Type: "AWS::SNS::Topic"
+    Properties:
+      DisplayName: "testdbalert"
+
+  MySNSSubscription:
+    Type: "AWS::SNS::Subscription"
+    Properties:
+      Protocol: "email"
+      TopicArn: !Ref MySNSTopic
+      Endpoint: "tpk452@gmail.com"
+
+# Add other resources as needed
+
+# Add an update to delete the subscription
+UpdateResources:
+  MySNSSubscription:
+    Type: "AWS::SNS::Subscription"
+    DeletionPolicy: "Delete"
