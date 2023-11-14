@@ -23,3 +23,12 @@ UpdateResources:
   MySNSSubscription:
     Type: "AWS::SNS::Subscription"
     DeletionPolicy: "Delete"
+	
+---zabbix-agent---
+[root@LDSADRDBIDP01 ~]#systemctl status zabbix-agent
+● zabbix-agent.service - Zabbix Agent
+   Loaded: loaded (/usr/lib/systemd/system/zabbix-agent.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Fri 2021-09-24 07:21:22 IST; 3s ago
+  Process: 21661 ExecStop=/bin/kill -SIGTERM $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 1344 ExecStart=/usr/sbin/zabbix_agentd -c $CONFFILE (code=exited, status=0/SUCCESS)
+ Main PID: 1353 (code=exited, status=0/SUCCESS)
